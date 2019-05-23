@@ -4,7 +4,7 @@
 #include <ModbusRtu.h>
 
 /*********** КОНФИГИ ************/
-#define MOD_ID  1  //Modbus адрес
+#define MOD_ID  2  //Modbus адрес
 /********************************/
 #define FOTORES  A0 // Фоторезистор освещенность
 #define IRSENSE  A1 // Фоторезистор импульсный
@@ -41,7 +41,7 @@ bool right = true;
 bool check_pos = false;
 bool led = true;
 bool firststart = true;
-bool check_pos_flag = true; //Разрешение установки текущего положени после подачи питания
+bool check_pos_flag = false; //Разрешение установки текущего положени после подачи питания
 int8_t state = 0;
 int pos = 0;
 int pre_pos = 0;
@@ -125,7 +125,6 @@ void loop() {
     rollet.disableOutputs();
   }
 }
-
 
 
 
